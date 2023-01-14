@@ -12,6 +12,10 @@ body {
   line-height: 1.5;
 }
 
+.is-hidden {
+  display: none;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -24,8 +28,21 @@ ul {
   margin-bottom: 16px;
 }
 
+.country-list {
+  background-color: lightgray;
+  width: fit-content;
+  padding: 10px 20px 10px 10px;
+
+  border-radius: 5px;
+}
+
+.country-list li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .country-info img {
-  height: 40px;
+  height: 35px;
+  margin-right: 10px;
   border: 1px black solid;
 }
 

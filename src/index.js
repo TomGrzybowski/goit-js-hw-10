@@ -13,7 +13,10 @@ function handleInput(event) {
   countryList.innerHTML = '';
   countryInfo.innerHTML = '';
 
-  if (name === '') return;
+  if (name === '') {
+    countryList.classList.add('is-hidden');
+    return;
+  }
 
   fetchCountries(name);
 }

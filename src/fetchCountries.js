@@ -18,9 +18,10 @@ export function fetchCountries(name) {
         );
       } else if (response.length > 1) {
         //if more than 1 output
+        const countryList = document.querySelector('.country-list');
+        countryList.classList.remove('is-hidden');
 
         response.forEach(el => {
-          const countryList = document.querySelector('.country-list');
           const li = document.createElement('li');
           li.classList.add('country-list__item');
           li.textContent = el.name;
@@ -33,8 +34,11 @@ export function fetchCountries(name) {
         });
       } else if (response.length === 1) {
         //if exactly 1 output
+        const countryList = document.querySelector('.country-list');
+        countryList.classList.add('is-hidden');
         const countryInfo = document.querySelector('.country-info');
         const languages = [];
+
         response[0].languages.forEach(el => {
           if (el.iso639_1) languages.push(el.name);
         });
